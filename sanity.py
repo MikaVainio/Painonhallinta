@@ -27,6 +27,15 @@ def liukuluku_syote(syote):
             arvo = 0
             virhekoodi = 1
             virhesanoma = 'Syötteessä useita desimaalierottimia'
+        else:
+            osa = str(osat[0])
+            if osa.isnumeric():
+               osa = str(osat[1]) 
+                if osa.isnumeric():
+                    arvo = float(syote)
+                    virhekoodi = 0
+                    virhesanoma = 'Syöte OK'
+          
     else:
         if syote.isnumeric():
             arvo = float(syote)
@@ -35,7 +44,7 @@ def liukuluku_syote(syote):
           
       
     return tulokset
- pass
+
 
 
 # Koodi, joka suoritetaan vain jos tämä tiedosto käynnistetään konsolista, esim "testit"
