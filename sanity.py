@@ -29,9 +29,9 @@ def liukuluku_syote(syote):
             virhekoodi = 1 # Tämä on virhe nro 1
             virhesanoma = 'Syötteessä useita desimaalierottimia'
         else: # Osia korkeintaan 2
-            osa = str(osat[0]) # Otetaan ensimmäinen listan ensimmäinen arvo ja muutetaan merkkijonoksi
+            osa = str(osat[0]) # Otetaan  listan ensimmäinen alkio ja muutetaan merkkijonoksi
             if osa.isnumeric(): # Jos se on numeerinen
-                osa = str(osat[1]) # Otetaan toinen osa
+                osa = str(osat[1]) # Otetaan toinen alkio ja muutetaan se merkkijonoksi
             
                 if osa.isnumeric(): # Jos toinenkin osa on numeeerinen
                     arvo = float(syote) # Muutetaan syöte liukuluvuksi
@@ -39,7 +39,7 @@ def liukuluku_syote(syote):
                     virhesanoma = 'Syöte OK'
                 else: # TODO: Tähän virhekoodin 2 asettaminen
                     pass
-                
+
             else:  # TODO: Tähän virhekoodin 2 asettaminen
                 pass
 
